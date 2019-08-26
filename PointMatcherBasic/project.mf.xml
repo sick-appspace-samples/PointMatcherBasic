@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<manifest>
+    <application name="PointMatcherBasic">
+        <crown name="LocateAndInspect">
+            <desc>user script</desc>
+            <serves/>
+        </crown>
+        <meta key="author">AppSpace Sample</meta>
+        <meta key="version">1.0</meta>
+        <meta key="licensed">false</meta>
+        <meta key="priority">low</meta>
+        <meta key="copy-protected">false</meta>
+        <meta key="read-protected">false</meta>
+        <entry path="pages" default="AppSpaceViewers-2.4.0.1.msdd">
+            <file type="application/zip">AppSpaceViewers-2.4.0.1.msdd</file>
+        </entry>
+        <entry path="resources">
+            <file type="image">1.png</file>
+            <file type="image">2.png</file>
+            <file type="image">Teach.png</file>
+        </entry>
+        <entry path="scripts" default="BasicLocalization.lua">
+            <file type="text/x-lua">BasicLocalization.lua</file>
+        </entry>
+    </application>
+</manifest>
