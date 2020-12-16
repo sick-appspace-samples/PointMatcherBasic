@@ -19,8 +19,8 @@
             <file type="image">2.png</file>
             <file type="image">Teach.png</file>
         </entry>
-        <entry path="scripts" default="BasicLocalization.lua">
-            <file type="text/x-lua">BasicLocalization.lua</file>
+        <entry path="scripts" default="basicLocalization.lua">
+            <file type="text/x-lua">basicLocalization.lua</file>
         </entry>
     </application>
 </manifest>

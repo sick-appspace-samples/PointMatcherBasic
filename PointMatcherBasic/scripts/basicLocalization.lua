@@ -30,7 +30,7 @@ print('AppEngine Version: ' .. Engine.getVersion())
 local DELAY = 2000 -- ms between visualization steps for demonstration purpose
 
 -- Create a viewer
-local viewer = View.create()
+local viewer = View.create('viewer2D1')
 -- Create a decoration instance for showing green points
 local greenDecoration = View.ShapeDecoration.create()
 greenDecoration:setPointSize(3)
