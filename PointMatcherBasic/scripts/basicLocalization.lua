@@ -44,7 +44,7 @@ matcher:setPoseType('RIGID')
 -- Slight downsampling makes the matching faster and sometimes also more robust as noise is removed
 matcher:setDownsampleFactor(2)
 -- In this sample it is expected, that the objects are only slightly rotated (30 degrees) relative to the teach object
-matcher:setRotationRange(30.0 / (2 * math.pi))
+matcher:setRotationRange(math.rad(30.0))
 -- A smaller point number than the default (1000) makes the matching faster
 matcher:setPointCount(500)
 
