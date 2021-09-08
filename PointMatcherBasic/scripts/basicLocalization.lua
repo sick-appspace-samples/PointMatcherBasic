@@ -1,32 +1,6 @@
---[[----------------------------------------------------------------------------
 
-  Application Name:
-  PointMatcherBasic
-
-  Summary:
-  Basic object matching using the PointMatcher.
-
-  Description:
-  Teaching visually significant points on the teach object and using those to
-  find identical objects.
-
-  How to Run:
-  Starting this sample is possible either by running the app (F5) or
-  debugging (F7+F10). Setting breakpoint on the first row inside the 'main'
-  function allows debugging step-by-step after 'Engine.OnStarted' event.
-  Results can be seen in the image viewer on the DevicePage.
-  To run this sample a device with SICK Algorithm API is necessary.
-  For example InspectorP or SIM4000 with latest firmware. Alternatively the
-  Emulator on AppStudio 2.2 or higher can be used.
-
-  More Information:
-  Tutorial "Algorithms - Matching".
-
-------------------------------------------------------------------------------]]
 --Start of Global Scope---------------------------------------------------------
-
 print('AppEngine Version: ' .. Engine.getVersion())
-
 local DELAY = 2000 -- ms between visualization steps for demonstration purpose
 
 -- Create a viewer
