@@ -4,7 +4,7 @@ print('AppEngine Version: ' .. Engine.getVersion())
 local DELAY = 2000 -- ms between visualization steps for demonstration purpose
 
 -- Create a viewer
-local viewer = View.create('viewer2D1')
+local viewer = View.create()
 -- Create a decoration instance for showing green points
 local greenDecoration = View.ShapeDecoration.create()
 greenDecoration:setPointSize(3)
@@ -48,8 +48,8 @@ local function main()
 
   -- View the teach image with the extracted PointMatcher model points overlaid
   viewer:clear()
-  local imViewId = viewer:addImage(teachImage)
-  viewer:addShape(teachPoints, greenDecoration, nil, imViewId)
+  viewer:addImage(teachImage)
+  viewer:addShape(teachPoints, greenDecoration)
   viewer:present()
   Script.sleep(DELAY) -- For demonstration purpose only
 
@@ -63,8 +63,7 @@ local function main()
     -- The return values are two vectors, one with pose transforms describing the positions and rotations of
     -- the found objects, and one vector with a score between 0.0 and 1.0 describing the quality of each match.
     -- The PointMatcher is currently restricted to finding 1 instance, so the vectors are of length 1.
-    local poses,
-      scores = matcher:match(liveImage)
+    local poses, scores = matcher:match(liveImage)
     print('Score: ' .. scores[1])
 
     -- Transform the PointMatcher model points into the live image using the obtained match pose
@@ -72,8 +71,8 @@ local function main()
 
     -- View the teach image with the extracted PointMatcher model points overlaid
     viewer:clear()
-    imViewId = viewer:addImage(liveImage)
-    viewer:addShape(livePoints, greenDecoration, nil, imViewId)
+    viewer:addImage(liveImage)
+    viewer:addShape(livePoints, greenDecoration)
     viewer:present()
     Script.sleep(DELAY) -- For demonstration purpose only
   end
